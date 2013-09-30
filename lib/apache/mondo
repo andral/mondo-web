@@ -1,0 +1,25 @@
+<VirtualHost *:80>
+    ServerAdmin webmaster@example.com
+    DocumentRoot /www/mondo/docs
+    ServerName mondo.example.com
+    ServerAlias mondo
+    ErrorLog /www/mondo/logs/error_log
+    CustomLog /www/mondo/logs/custom_log common
+    <Directory "/www/mondo/docs">
+        # single sign on
+        AuthName "NTLM Authentication thingy"
+        NTLMAuth on
+        NTLMAuthHelper "/usr/bin/ntlm_auth --helper-protocol=squid-2.5-ntlmssp"
+        NTLMBasicAuthoritative on
+        AuthType NTLM
+        require valid-user
+
+        # pretty urls
+        RewriteEngine on
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteRule ^.*$ ./index.php
+
+    </Directory>
+</VirtualHost>
+
