@@ -8,9 +8,9 @@ if (isset($_POST['session_reload']) and $_POST['session_reload']) {
 if (!isset($_SESSION['servers'])) {
     require('inc/xmlrpc/xmlrpc.inc');
 
-    $satellite_login = 'scriptuser';
-    $satellite_password = '_sCripts4SAT!';
-    $satellite_url = 'http://spch1355.zrh.local/rpc/api';
+    $satellite_login = 'someuser';
+    $satellite_password = 'somepasswd';
+    $satellite_url = 'http://satellite.example.local/rpc/api';
 
     $client = new xmlrpc_client($satellite_url);
     $client->return_type = 'phpvals';

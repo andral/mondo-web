@@ -8,11 +8,8 @@ if (!isset($_SESSION)){ session_start(); }
 // if no NTLM user is provided, throw an error 
 
 $_users = array(
-                   "u100839" => "Christoph Richle",
-                   "u105560" => "Sandro Roth",
-                   "u106118" => "Ivan Torretti",
-                   "u103601" => "Martin Schudel",
-                   "x052624" => "Lukasz Matwiejczuk",
+                   "test1" => "Test1 Username",
+                   "test2" => "Test2 Username",
                );
 
 
@@ -102,7 +99,7 @@ if ($access) {
     } else {
         echo "  <div class=\"alert alert-info\">You don't have access to this site!</div>";
     }
-    echo "<p>Please contact <a href=\"mailto:datacenter@zurich-airport.com?Subject=Mondo%20Web\" target=\"_top\">SIIR</a>\n";
+    echo "<p>Please contact <a href=\"mailto:webmaster@example.local?Subject=Mondo%20Web\" target=\"_top\">Webmaster</a>\n";
     echo "</div>\n";
     //echo "<pre>";
     //echo $user . "\n";

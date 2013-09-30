@@ -36,7 +36,7 @@ echo "</pre><br>\n";
           <hr>
           <footer>
             <p>
-              &copy; Flughafen Z&uuml;rich AG 2013 - SIIR
+              &copy; Example Company 
 <?php
 
 $script_end = microtime(true);
