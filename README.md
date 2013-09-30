@@ -5,7 +5,7 @@ Mondo Web
 
 Monto Web is a small web UI to display the latest mondo backups.
 
-!(screenshot)[https://raw.github.com/andral/mondo-web/master/lib/mondo-web.png)
+![screenshot](/lib/mondo-web.png)
 
 It's a nasty and ugly PHP hack but it works for us to have a quick overview of all the backups.
 
