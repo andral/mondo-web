@@ -1,0 +1,2 @@
+# run mondo.sh every wednesday
+02 03 * * 3 root /opt/fzag/bin/mondo-cron.sh
